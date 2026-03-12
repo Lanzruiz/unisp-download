@@ -11,4 +11,4 @@ WORKDIR /app
 # Installs npm dependencies on container
 RUN npm install
 # Command container will actually run when called
-CMD ["node", "index.js"]
+CMD ["node", "app.js"]
