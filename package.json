@@ -1,0 +1,20 @@
+{
+  "name": "downloadpage",
+  "version": "1.0.0",
+  "description": "Static download landing page (no build step).",
+  "homepage": "https://github.com/Lanzruiz/unisp-download#readme",
+  "bugs": {
+    "url": "https://github.com/Lanzruiz/unisp-download/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lanzruiz/unisp-download.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
