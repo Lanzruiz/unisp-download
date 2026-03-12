@@ -16,12 +16,13 @@
 #     - uses: actions/checkout@v4
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag lanzprimeit/test:$(date +%s)
+# some changes to test the workflows
 
 name: Build and Push Docker image to Docker Hub
 
 on: 
   pull_request: 
-       branches: [ "dev" ]
+       branches: [ "sit" ]
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
