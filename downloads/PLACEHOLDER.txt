@@ -1,0 +1,9 @@
+Put your installers in this folder (or change the links in `index.html`).
+
+Expected placeholder filenames used by the page:
+- UniSP-mac.dmg
+- UniSP-mac.zip
+- UniSP-win.exe
+- UniSP-win.msi
+- UniSP-android.apk
+
