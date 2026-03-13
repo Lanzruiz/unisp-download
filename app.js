@@ -6,6 +6,7 @@ const DOWNLOADS = {
 };
 
 function detectPlatform() {
+  if (typeof navigator === "undefined") return null;
   const ua = navigator.userAgent || "";
   const platform = navigator.platform || "";
 
@@ -17,6 +18,7 @@ function detectPlatform() {
 }
 
 function toast(message) {
+  if (typeof document === "undefined") return;
   const el = document.getElementById("toast");
   if (!el) return;
   el.textContent = message;
@@ -35,11 +37,13 @@ async function copyText(text) {
 }
 
 function setYear() {
+  if (typeof document === "undefined") return;
   const y = document.getElementById("year");
   if (y) y.textContent = String(new Date().getFullYear());
 }
 
 function setupSmartDownload() {
+  if (typeof document === "undefined") return;
   const btn = document.getElementById("btn-smart-download");
   if (!btn) return;
 
@@ -71,6 +75,7 @@ function setupSmartDownload() {
 }
 
 function setupCopyLink() {
+  if (typeof document === "undefined") return;
   const btn = document.getElementById("btn-copy-link");
   if (!btn) return;
 
@@ -84,6 +89,7 @@ function setupCopyLink() {
 }
 
 function setupHashCopy() {
+  if (typeof document === "undefined") return;
   document.addEventListener("click", async (e) => {
     const t = e.target;
     if (!(t instanceof HTMLElement)) return;
@@ -98,6 +104,7 @@ function setupHashCopy() {
 }
 
 function disableAriaDisabledLinks() {
+  if (typeof document === "undefined") return;
   document.addEventListener("click", (e) => {
     const t = e.target;
     if (!(t instanceof HTMLElement)) return;
@@ -108,9 +115,11 @@ function disableAriaDisabledLinks() {
   });
 }
 
-setYear();
-setupSmartDownload();
-setupCopyLink();
-setupHashCopy();
-disableAriaDisabledLinks();
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  setYear();
+  setupSmartDownload();
+  setupCopyLink();
+  setupHashCopy();
+  disableAriaDisabledLinks();
+}
 

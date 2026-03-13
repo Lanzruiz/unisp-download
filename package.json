@@ -1,7 +1,7 @@
 {
   "name": "downloadpage",
   "version": "1.0.0",
-  "description": "Static download landing page (no build step).",
+  "description": "Download landing page built with Vite + React.",
   "homepage": "https://github.com/Lanzruiz/unisp-download#readme",
   "bugs": {
     "url": "https://github.com/Lanzruiz/unisp-download/issues"
@@ -10,11 +10,22 @@
     "type": "git",
     "url": "git+https://github.com/Lanzruiz/unisp-download.git"
   },
+  
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "echo \"No linter configured\""
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "vite": "^6.0.0"
   }
 }
